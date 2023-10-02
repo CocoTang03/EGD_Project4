@@ -1,11 +1,17 @@
 ﻿title: Start
 ---
-Wow!
-My first ever Yarn script in Unity!
+<<declare $actions_per_day = 3 as Number>>
 
--> Gosh!
--> Incredible!
--> I'm amazed!
+Wow!
+Player: My first ever Yarn script in Unity!
+-> gosh!
+	<<jump GoshNode>>
 
 Anyway, time to get writing!
+===
+
+title: GoshNode
+---
+im in goshnode.
+-> continue
 ===

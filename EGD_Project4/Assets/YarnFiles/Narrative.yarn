@@ -67,18 +67,21 @@ title: Cook2
 ---
 <<setValue "cook" true>>
 <<sfxPlay "Frying">>
+<<addTasks 1>>
 Your favorite protein source, your favorite complex carbs, your favorite vegetables, plus dessert. Perfectly balanced.
 <<jump Loop2>>
 ===
 title: Work2
 ---
 <<setValue "work" true>>
+<<addTasks 1>>
 In wanting to have your friends over for the weekend, you decide that you should work on getting everything to be absolutely spotless. You start by cleaning all the windows, then you vacuum your whole apartment for good measure.
 <<jump Loop2>>
 ===
 title: Care2
 ---
 <<setValue "selfCare" true>>
+<<addTasks 1>>
 You paint for a bit. Since your job is so technical, you think it's important for you to nurture your creative side outside of it.
 <<jump Loop2>>
 ===
@@ -108,18 +111,21 @@ title: Cook3
 ---
 <<setValue "cook" true>>
 <<sfxPlay "Frying">>
+<<addTasks 1>>
 You load up some instant noodles with ingredients so it can be quick and nutritious. The taste makes you nostalgic for college. You don't realize that you're looking at those busy years with rose-tinted glasses.
 <<jump Loop3>>
 ===
 title: Work3
 ---
 <<setValue "work" true>>
+<<addTasks 1>>
 You finish folding the last of your laundry, as you didn't have time to get through all of it yesterday. It left your shirts a bit wrinkly, but if you hang them up in the bathroom while you shower, they should fix themselves.
 <<jump Loop3>>
 ===
 title: Care3
 ---
 <<setValue"selfCare" true>>
+<<addTasks 1>>
 You lose track of time as you immerse yourself in an endless stream of short-form videos. Your work friend texts you: "You seem like you've been busy recently, make sure to take it easy, ok?" You tell yourself that you'll reply later, but you never get to it.
 <<jump Loop3>>
 ===
@@ -150,18 +156,21 @@ title: Cook4
 ---
 <<setValue "cook" true>>
 <<sfxPlay "Frying">>
+<<addTasks 1>>
 You pour boiling water over instant ramen and get back to work. By the time you remember that your noodles should have cooled off, they're cold and mushy.
 <<jump Loop4>>
 ===
 title: Work4
 ---
 <<setValue "work" true>>
+<<addTasks 1>>
 Each of your porcelain cats is blanketed by dust. Their expressions once seemed to be filled with light and joy, but now they look more like blank stares. You think it's tedious to keep dusting off decorations, which serve no practical purpose, all so that they can gather dust again, so you pack the figures away.
 <<jump Loop4>>
 ===
 title: Care4
 ---
 <<setValue "selfCare" true>>
+<<addTasks 1>>
 You need to get your work done. You can do something nice for yourself on the weekend. Besides, isn't working a form of self-care if it means that you have less work to do later?
 <<jump Loop4>>
 ===
@@ -194,12 +203,14 @@ title: Loop5
 title: Laundry
 ---
 <<setValue "laundry" true>>
+<<addTasks 1>>
 <<sfxPlay "Laundry">>
 Your clothes engulf your bedroom floor and lap at your ankles. You know laundry is going to take all day and you dread it, but you have no other option, as there's nothing left in your closet to wear.
 ===
 title: WashDishes
 ---
 <<setValue "dishWash" true>>
+<<addTasks 1>>
 <<sfxPlay "Dishes">>
 You're scared to see how many dishes have piled up over the week, but you go to the sink and are surprised. Takeout, instant noodles, and being too caught up with work to remember that you need to feed yourself mean that there's hardly anything there.
 ===
@@ -207,18 +218,21 @@ title: CallParents
 ---
 <<setValue "callParents" true>>
 <<sfxPlay "Phone Call">>
+<<addTasks 1>>
 Your parents are happy about your newfound independence as an adult (after all, you hardly need to call them anymore!). But they're also worried about you, as they hear the sadness and exhaustion in your voice as you reply. They give you space to talk about how you're doing, but you don't know what to say to them.
 ===
 title: Fridge
 ---
 <<setValue "cleanOutFridge" true>>
 <<sfxPlay "Fridge Clean">>
+<<addTasks 1>>
 A few months ago, your fridge would be stocked with fresh ingredients. Back then, you'd make sure to use everything before its expiration date. Now, the only things that haven't gone bad are a pack of beverages and a shelf of condiments.
 ===
 title: JobHunt
 ---
 <<sfxPlay "Job Hunting">>
 <<setValue "jobHunt" true>>
+<<addTasks 1>>
 You feel guilty for thinking about switching companies, but you think that a change of pace could be nice. You scroll through job listings, but they all pay close to the one you have. You don't have the time or energy to adjust your resume, submit it, and go in for an interview (if you're lucky) just for the chance to discuss a higher salary.
 ===
 title: Beat5

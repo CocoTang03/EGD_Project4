@@ -1,17 +1,42 @@
-﻿title: Start
+﻿title: s
+position: 72,-140
 ---
 <<declare $actions_per_day = 3 as Number>>
+<<declare $action_num = 0 as Number>>
 
 Wow!
 Player: My first ever Yarn script in Unity!
--> gosh!
-	<<jump GoshNode>>
+
+<<jump LoopOption>>
+
 
 Anyway, time to get writing!
+
 ===
 
 title: GoshNode
+position: 298,96
 ---
 im in goshnode.
 -> continue
+<<jump Start>>
 ===
+
+title: LoopOption
+tags:
+---
+-> work <<if getValue("work") == false>>
+	<<jump WorkPart>>
+-> cook <<if getValue("cook") == false>>
+-> care <<if getValue("selfCare") == false>>
+
+===
+
+title: WorkPart
+tags:
+---
+working now
+<<setValue "work" true>>
+<<jump LoopOption>>
+===
+

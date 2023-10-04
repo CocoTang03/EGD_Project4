@@ -12,43 +12,47 @@ Now that you've arrived back home, you decide to...
 
 ===
 title: Loop1
+---
 -> Cook dinner <<if getValue("cook") == false>>
     <<jump Cook1>>
 -> Work on projects around the house <<if getValue("work") == false>>
     <<jump Work1>>
 -> Self-care <<if getValue("selfCare") == false>>
     <<jump Care1>>
+-> Time passes... <<if getTasksDone() == 3>>
 <<jump Beat1>> // todo: does this jump at the end?
 ===
 title: Cook1
 ---
-<<setValue("cook", true)>> // todo: will this work?
+<<setValue "cook" true>> // todo: will this work?
+<<addTasks 1>>
 You decide to cook your favorite meal. It's worth celebrating a great first week!
 <<jump Loop1>>
 ===
 title: Work1
 ---
-<<setValue("work", true)>>
+<<setValue "work" true>>
+<<addTasks 1>>
 Even though you've moved everything in, you still haven't had a chance to decorate. You take out your porcelain cats and group them into small clusters throughout your apartment. Interior design is truly your passion.
 <<jump Loop1>>
 ===
 title: Care1
 ---
-<<setValue("selfCare", true)>>
+<<setValue "selfCare" true>>
+<<addTasks 1>>
 You call your friends and family and excitedly tell them about how things have been. You're a bit sad that your job required you to move so far away from everyone, so you’re looking forward to getting to know some new faces as you explore town.
 <<jump Loop1>>
 ===
 title: Beat1
 ---
-<<setValue("cook", false)>>
-<<setValue("work", false)>>
-<<setValue("selfCare", false)>>
+<<reset false>>
 //todo: set office sprite
 July 5. Things are finally starting to fall into place! You don't need to ask for help as often, and you've made some friends within the company. You've noticed that your workload has been picking up a bit as more things have been assigned to you, but it means that your hard work is being recognized!
 //todo: set home sprite
 Now that you've arrived back home, you decide to...
 ===
 title: Loop2
+---
 -> Cook dinner <<if getValue("cook") == false>>
     <<jump Cook2>>
 -> Work on projects around the house <<if getValue("work") == false>>
@@ -59,27 +63,27 @@ title: Loop2
 ===
 title: Cook2
 ---
-<<setValue("cook", true)>>
+<<setValue "cook" true>>
 Your favorite protein source, your favorite complex carbs, your favorite vegetables, plus dessert. Perfectly balanced.
 <<jump Loop2>>
 ===
 title: Work2
 ---
-<<setValue("work", true)>>
+<<setValue "work" true>>
 In wanting to have your friends over for the weekend, you decide that you should work on getting everything to be absolutely spotless. You start by cleaning all the windows, then you vacuum your whole apartment for good measure.
 <<jump Loop2>>
 ===
 title: Care2
 ---
-<<setValue("selfCare", true)>>
+<<setValue "selfCare" true>>
 You paint for a bit. Since your job is so technical, you think it's important for you to nurture your creative side outside of it.
 <<jump Loop2>>
 ===
 title: Beat2
 ---
-<<setValue("cook", false)>>
-<<setValue("work", false)>>
-<<setValue("selfCare", false)>>
+<<setValue "cook" false>>
+<<setValue "work" false>>
+<<setValue "selfCare" false>>
 //todo: set office sprite
 August 17. Recently, it feels like you've been given a constant stream of busywork. Most of it doesn't match your job description. You discuss this with your manager, who explains that this is happening because certain deadlines need to be met soon.
 Since the circumstances are temporary, you're willing to take a bit out of yourself to help the company. Perhaps that'll even help distinguish you, making you more eligible for a raise.
@@ -87,6 +91,7 @@ Since the circumstances are temporary, you're willing to take a bit out of yours
 Now that you've arrived back home, you decide to...
 ===
 title: Loop3
+---
 -> Cook dinner <<if getValue("cook") == false>>
     <<jump Cook3>>
 -> Work on projects around the house <<if getValue("work") == false>>
@@ -97,28 +102,28 @@ title: Loop3
 ===
 title: Cook3
 ---
-<<setValue("cook", true)>>
+<<setValue "cook" true>>
 You load up some instant noodles with ingredients so it can be quick and nutritious. The taste makes you nostalgic for college. You don't realize that you're looking at those busy years with rose-tinted glasses.
 <<jump Loop3>>
 ===
 title: Work3
 ---
-<<setValue("work", true)>>
+<<setValue "work" true>>
 You finish folding the last of your laundry, as you didn't have time to get through all of it yesterday. It left your shirts a bit wrinkly, but if you hang them up in the bathroom while you shower, they should fix themselves.
 <<jump Loop3>>
 ===
 title: Care3
 ---
-<<setValue("selfCare", true)>>
+<<setValue"selfCare" true>>
 You lose track of time as you immerse yourself in an endless stream of short-form videos. Your work friend texts you: "You seem like you've been busy recently, make sure to take it easy, ok?" You tell yourself that you'll reply later, but you never get to it.
 <<jump Loop3>>
 ===
-===
+
 title: Beat3
 ---
-<<setValue("cook", false)>>
-<<setValue("work", false)>>
-<<setValue("selfCare", false)>>
+<<setValue"cook" false>>
+<<setValue"work" false>>
+<<setValue"selfCare" false>>
 //todo: set office sprite
 September 1. You've started taking your work home with you. You wonder... is everyone working this hard? It doesn't seem like it. So, are you just bad at this, or are you getting stuck with such a long list of meaningless tasks because you're still new?
 ...Whatever, some higher-up must be seeing all this hard work you're doing, so you should be set to get a raise soon. This is just a stepping stone until then.
@@ -126,6 +131,7 @@ September 1. You've started taking your work home with you. You wonder... is eve
 Now that you've arrived back home, you decide to...
 ===
 title: Loop4
+---
 -> Cook dinner <<if getValue("cook") == false>>
     <<jump Cook4>>
 -> Work on projects around the house <<if getValue("work") == false>>
@@ -136,25 +142,25 @@ title: Loop4
 ===
 title: Cook4
 ---
-<<setValue("cook", true)>>
+<<setValue "cook" true>>
 You pour boiling water over instant ramen and get back to work. By the time you remember that your noodles should have cooled off, they're cold and mushy.
 <<jump Loop4>>
 ===
 title: Work4
 ---
-<<setValue("work", true)>>
+<<setValue "work" true>>
 Each of your porcelain cats is blanketed by dust. Their expressions once seemed to be filled with light and joy, but now they look more like blank stares. You think it's tedious to keep dusting off decorations, which serve no practical purpose, all so that they can gather dust again, so you pack the figures away.
 <<jump Loop4>>
 ===
 title: Care4
 ---
-<<setValue("selfCare", true)>>
+<<setValue "selfCare" true>>
 You need to get your work done. You can do something nice for yourself on the weekend. Besides, isn't working a form of self-care if it means that you have less work to do later?
 <<jump Loop4>>
 ===
 title: Beat4
 ---
-<<setValue("work", false)>>
+<<setValue "work" false>>
 //todo: set office sprite
 October 13. You are Atlas, holding the weight of the world on your shoulders, until you can give your back a break (but that's only on the weekends). Thankfully, it's Friday night, so you finally have some time to kick back!
 //set home sprite
@@ -238,3 +244,4 @@ The process of healing and getting back on your feet takes time, but you needed 
 Sometimes, the world is built in ways that won't take you into consideration. In being pressured to "adapt", you may be forced to minimize yourself and your needs. If you aren't able to do that, then you're made to feel guilty about it.
 As you've slowly discovered happiness once again, you've reached new understandings. You're allowed to insist on your needs. You're allowed to draw boundaries. You shouldn't let someone else's understanding of how productive you are diminish your inner worth or get in the way of living your most fulfilling life.
 In a world where we're often so focused on "doing", we must take the time to lie flat for a bit so that we can focus on "being".
+===

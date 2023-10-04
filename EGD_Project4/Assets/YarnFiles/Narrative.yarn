@@ -50,6 +50,7 @@ title: Beat1
 July 5. Things are finally starting to fall into place! You don't need to ask for help as often, and you've made some friends within the company. You've noticed that your workload has been picking up a bit as more things have been assigned to you, but it means that your hard work is being recognized!
 <<setBackground house>>
 Now that you've arrived back home, you decide to...
+<<jump Loop2>>
 ===
 title: Loop2
 ---
@@ -92,6 +93,7 @@ August 17. Recently, it feels like you've been given a constant stream of busywo
 Since the circumstances are temporary, you're willing to take a bit out of yourself to help the company. Perhaps that'll even help distinguish you, making you more eligible for a raise.
 <<setBackground house>>
 Now that you've arrived back home, you decide to...
+<<jump Loop3>>
 ===
 title: Loop3
 ---
@@ -121,7 +123,7 @@ You finish folding the last of your laundry, as you didn't have time to get thro
 ===
 title: Care3
 ---
-<<setValue"selfCare" true>>
+<<setValue "selfCare" true>>
 <<addTasks 1>>
 You lose track of time as you immerse yourself in an endless stream of short-form videos. Your work friend texts you: "You seem like you've been busy recently, make sure to take it easy, ok?" You tell yourself that you'll reply later, but you never get to it.
 <<jump Loop3>>
@@ -135,6 +137,7 @@ September 1. You've started taking your work home with you. You wonder... is eve
 ...Whatever, some higher-up must be seeing all this hard work you're doing, so you should be set to get a raise soon. This is just a stepping stone until then.
 <<setBackground house>>
 Now that you've arrived back home, you decide to...
+<<jump Loop4>>
 ===
 title: Loop4
 ---

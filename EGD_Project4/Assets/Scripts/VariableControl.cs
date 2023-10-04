@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using Yarn.Unity;
 public class VariableControl : MonoBehaviour
 {
+    public List<GameObject> backgrounds;
     private DialogueRunner runner;
     private static int days;
     private static float mood;
@@ -19,6 +20,14 @@ public class VariableControl : MonoBehaviour
     //private const 
     public void Awake()
     {
+        backgrounds = new List<GameObject>();
+        backgrounds.Add(GameObject.Find("abstract"));
+        backgrounds.Add(GameObject.Find("family"));
+        backgrounds.Add(GameObject.Find("house"));
+        backgrounds.Add(GameObject.Find("moving"));
+        backgrounds.Add(GameObject.Find("office"));
+        backgrounds.Add(GameObject.Find("school"));
+
         options = new Dictionary<string, bool>();
         options.Add( "work", false );
         options.Add( "cook", false );
@@ -34,31 +43,33 @@ public class VariableControl : MonoBehaviour
         Debug.Log("Scripts start");
 
         runner = GameObject.FindObjectOfType<DialogueRunner>();
+
         runner.AddFunction<int>("getDayNum", GetDayNum);
-        runner.AddCommandHandler<int>("setDayNum", SetDayNum);
         runner.AddFunction<float>("getMood", GetMood);
+        runner.AddFunction<int>("getTasksDone", GetTasksDone);
+        runner.AddFunction<string, bool>("getValue", GetValue);
+
+        runner.AddCommandHandler<int>("setDayNum", SetDayNum);
         // Use: <<setMood 0.1>> ->the float could be negative
         runner.AddCommandHandler<float>("setMood", SetMood);
-        runner.AddFunction<string, bool>("getValue", GetValue);
         runner.AddCommandHandler<string, bool>("setValue", SetValue);
         runner.AddCommandHandler<bool>("reset", Reset);
-        runner.AddFunction<int>("getTasksDone", GetTasksDone);
         runner.AddCommandHandler<int>("addTasks", AddTasks);
-        // Background Loading -> Example: <<setBackground family>>
+        // Background Loading -> Example: <<setBackground "family">>
         runner.AddCommandHandler<string>("setBackground", SwitchBackground);
         // Sound Effect -> Example: <<sfxPlay "Click>>
         runner.AddCommandHandler<string>("sfxPlay", SFXPlay);
     }
     public void Start()
     {
-        Sprite abs = Resources.Load<Sprite>("abstract");
+        /*Sprite abs = Resources.Load<Sprite>("abstract");
         Sprite family = Resources.Load<Sprite>("family_base");
         Sprite house = Resources.Load<Sprite>("house_base");
         Sprite moving = Resources.Load<Sprite>("movingforwards_base");
         Sprite office = Resources.Load<Sprite>("office_base");
-        Sprite school = Resources.Load<Sprite>("school_base");
+        Sprite school = Resources.Load<Sprite>("school_base");*/
         //audioSources = Resources.LoadAll<AudioSource>("Lying Flat SFX");
-        SwitchBackground("abstract");
+        //SwitchBackground("house");
     }
 
     private static int GetTasksDone() { return taskDone; }
@@ -81,11 +92,11 @@ public class VariableControl : MonoBehaviour
     // To Do: create a sprite called "Background"
     private void SwitchBackground(string name)
     {
-        Debug.Log(name);
-        Sprite sprite = Resources.Load<Sprite>(name);
-        Debug.Log(sprite);
-        GameObject.Find("Background").GetComponent<Image>().sprite = sprite;
-        Debug.Log(sprite);
+        for(int i = 0; i < backgrounds.Count; i++)
+        {
+            backgrounds[i].GetComponent<Image>().enabled = false;
+        }
+        backgrounds.FirstOrDefault(image => image.name == name).GetComponent<Image>().enabled = true;
     }
     private void SFXPlay(string name)
     {

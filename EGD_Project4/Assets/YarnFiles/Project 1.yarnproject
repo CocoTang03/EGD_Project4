@@ -1,0 +1,12 @@
+{
+  "projectFileVersion": 2,
+  "sourceFiles": [
+    "**/*.yarn"
+  ],
+  "excludeFiles": [],
+  "localisation": {
+    "zh-CHS": {}
+  },
+  "baseLanguage": "en",
+  "compilerOptions": {}
+}

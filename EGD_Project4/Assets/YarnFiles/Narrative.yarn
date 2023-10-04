@@ -50,6 +50,7 @@ title: Beat1
 July 5. Things are finally starting to fall into place! You don't need to ask for help as often, and you've made some friends within the company. You've noticed that your workload has been picking up a bit as more things have been assigned to you, but it means that your hard work is being recognized!
 <<setBackground house>>
 Now that you've arrived back home, you decide to...
+<<jump Loop2>>
 ===
 title: Loop2
 ---
@@ -85,10 +86,12 @@ title: Beat2
 ---
 <<reset false>>
 <<setBackground office>>
+<<setMood -30>>
 August 17. Recently, it feels like you've been given a constant stream of busywork. Most of it doesn't match your job description. You discuss this with your manager, who explains that this is happening because certain deadlines need to be met soon.
 Since the circumstances are temporary, you're willing to take a bit out of yourself to help the company. Perhaps that'll even help distinguish you, making you more eligible for a raise.
 <<setBackground house>>
 Now that you've arrived back home, you decide to...
+<<jump Loop3>>
 ===
 title: Loop3
 ---
@@ -125,10 +128,12 @@ title: Beat3
 ---
 <<reset false>>
 <<setBackground office>>
+<<setMood -50>>
 September 1. You've started taking your work home with you. You wonder... is everyone working this hard? It doesn't seem like it. So, are you just bad at this, or are you getting stuck with such a long list of meaningless tasks because you're still new?
 ...Whatever, some higher-up must be seeing all this hard work you're doing, so you should be set to get a raise soon. This is just a stepping stone until then.
 <<setBackground house>>
 Now that you've arrived back home, you decide to...
+<<jump Loop4>>
 ===
 title: Loop4
 ---
@@ -164,6 +169,7 @@ title: Beat4
 ---
 <<reset false>>
 <<setBackground office>>
+<<setMood -70>>
 October 13. You are Atlas, holding the weight of the world on your shoulders, until you can give your back a break (but that's only on the weekends). Thankfully, it's Friday night, so you finally have some time to kick back!
 <<setBackground house>>
 Now that you've arrived back home, you decide to...
@@ -219,6 +225,7 @@ title: Beat5
 ---
 <<setBackground office>>
 <<sfxPlay "Typing">>
+<<setMood -80>>
 Is this all there is to life?
 -> Work
 <<setBackground house>>
@@ -227,6 +234,7 @@ The same tasks, yet they never seem to get easier.
 A backlog that you'll never complete.
 
 <<setBackground office>>
+<<setMood -90>>
 <<sfxPlay "Typing">>
 You feel broken.
 -> Work
@@ -236,12 +244,14 @@ You recently used your paid vacation days to stay home and recover from a cold. 
 Maybe things will get better with the new year.
 
 <<setBackground office>>
+<<setMood -100>>
 <<sfxPlay "Typing">>
 You've lost touch with your sense of self. All you are is what you complete, and it never seems to be enough. Your loneliness and dissatisfaction drive you to work harder, which fuels your loneliness and dissatisfaction.
 You're out of options. It's a cycle you can't break. Unless...
 -> Quit
 
 <<setBackground family>>
+<<setMood -60>>
 Moving back in with your parents... a part of you feels like you've thrown away everything you've built for yourself. You're overwhelmed with thoughts of how much of a failure you are, but they pause when your parents wrap you in a hug. Your bottled-up emotions spill out.
 -> Explore your childhood bedroom
 Just being in this space makes you feel a bit lighter. As you start re-organizing your belongings into the room, you feel like you've unearthed a time capsule of fond memories. Toys, artwork from middle school, your old DS... You pop in a game and finally allow yourself to do something fun again.
@@ -250,6 +260,8 @@ Your family calls you down for dinner. Your dad cooked you your favorite. You ea
 -> Reconnect with the family pet
 It feels like it's been forever since you interacted with the family's cat. You let her sniff your hand before you go in to pet her. Your heart softens as she starts purring.
 
+
+<<setMood 0>>
 <<setBackground Movingforwards>>
 The process of healing and getting back on your feet takes time, but you needed all this time before you could move forward and return to work with a healthier mindset. Counting up the days "wasted" and feeling guilty is what you would have done in the past, but not anymore. What purpose would that serve you?
 Sometimes, the world is built in ways that won't take you into consideration. In being pressured to "adapt", you may be forced to minimize yourself and your needs. If you aren't able to do that, then you're made to feel guilty about it.

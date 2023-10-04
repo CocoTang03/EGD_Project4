@@ -1,11 +1,11 @@
 ﻿title: Start
 ---
-<<setBackground school>>
+<<setBackground "school">>
 April 20. It's the last few days of class... you can't believe your senior year is almost over. It's been a bit hectic, staying on top of so many due dates, attending the last of club meetings, and trying to stay in touch with your friends through it all.
 But it'll be over soon, and the future is looking bright! You've already accepted a job opportunity by a company that matches your ethos. With your passion, you're certain that you'll be doing your part to help the world around you... right after graduation, nonetheless!
-<<setBackground office>>
+<<setBackground "office">>
 June 2. You just finished your first week! You're still matching names to faces and keep directing all your questions to the same coworker, but the environment there is great. You know that you're really going to shine after you finish adjusting.
-<<setBackground house>>
+<<setBackground "house">>
 Now that you've arrived back home, you decide to...
 <<jump Loop1>>
 
@@ -46,9 +46,9 @@ You call your friends and family and excitedly tell them about how things have b
 title: Beat1
 ---
 <<reset false>>
-<<setBackground office>>
+<<setBackground "office">>
 July 5. Things are finally starting to fall into place! You don't need to ask for help as often, and you've made some friends within the company. You've noticed that your workload has been picking up a bit as more things have been assigned to you, but it means that your hard work is being recognized!
-<<setBackground house>>
+<<setBackground "house">>
 Now that you've arrived back home, you decide to...
 <<jump Loop2>>
 ===

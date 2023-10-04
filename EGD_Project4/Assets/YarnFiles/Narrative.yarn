@@ -20,11 +20,11 @@ title: Loop1
 -> Self-care <<if getValue("selfCare") == false>>
     <<jump Care1>>
 -> Time passes... <<if getTasksDone() == 3>>
-<<jump Beat1>> // todo: does this jump at the end?
+<<jump Beat1>>
 ===
 title: Cook1
 ---
-<<setValue "cook" true>> // todo: will this work?
+<<setValue "cook" true>>
 <<addTasks 1>>
 You decide to cook your favorite meal. It's worth celebrating a great first week!
 <<jump Loop1>>
@@ -59,7 +59,8 @@ title: Loop2
     <<jump Work2>>
 -> Self-care <<if getValue("selfCare") == false>>
     <<jump Care2>>
-<<jump Beat2>> // todo: does this jump at the end?
+-> Time passes... <<if getTasksDone() == 3>>
+<<jump Beat2>>
 ===
 title: Cook2
 ---
@@ -98,7 +99,8 @@ title: Loop3
     <<jump Work3>>
 -> Self-care <<if getValue("selfCare") == false>>
     <<jump Care3>>
-<<jump Beat3>> // todo: does this jump at the end?
+-> Time passes... <<if getTasksDone() == 3>>
+<<jump Beat3>>
 ===
 title: Cook3
 ---
@@ -138,7 +140,8 @@ title: Loop4
     <<jump Work4>>
 -> Self-care <<if getValue("selfCare") == false>>
     <<jump Care4>>
-<<jump Beat4>> // todo: does this jump at the end?
+-> Time passes... <<if getTasksDone() == 3>>
+<<jump Beat4>>
 ===
 title: Cook4
 ---
@@ -180,31 +183,32 @@ title: Loop5
     <<jump Fridge>>
 -> Job hunt <<if getValue("jobHunt") == false>>
     <<jump JobHunt>>
+-> Time passes... <<if getTasksDone() == 5>>
 <<jump Beat5>>
 ===
 title: Laundry
 ---
-<<setValue("laundry",true)>>
+<<setValue "laundry" true>>
 Your clothes engulf your bedroom floor and lap at your ankles. You know laundry is going to take all day and you dread it, but you have no other option, as there's nothing left in your closet to wear.
 ===
 title: WashDishes
 ---
-<<setValue("dishWash",true)>>
+<<setValue "dishWash" true>>
 You're scared to see how many dishes have piled up over the week, but you go to the sink and are surprised. Takeout, instant noodles, and being too caught up with work to remember that you need to feed yourself mean that there's hardly anything there.
 ===
 title: CallParents
 ---
-<<setValue("callParents",true)>>
+<<setValue "callParents" true>>
 Your parents are happy about your newfound independence as an adult (after all, you hardly need to call them anymore!). But they're also worried about you, as they hear the sadness and exhaustion in your voice as you reply. They give you space to talk about how you're doing, but you don't know what to say to them.
 ===
 title: Fridge
 ---
-<<setValue("cleanOutFridge",true)>>
+<<setValue "cleanOutFridge" true>>
 A few months ago, your fridge would be stocked with fresh ingredients. Back then, you'd make sure to use everything before its expiration date. Now, the only things that haven't gone bad are a pack of beverages and a shelf of condiments.
 ===
 title: JobHunt
 ---
-<<setValue("jobHunt",true)>>
+<<setValue "jobHunt" true>>
 You feel guilty for thinking about switching companies, but you think that a change of pace could be nice. You scroll through job listings, but they all pay close to the one you have. You don't have the time or energy to adjust your resume, submit it, and go in for an interview (if you're lucky) just for the chance to discuss a higher salary.
 ===
 title: Beat5

@@ -1,5 +1,4 @@
 ﻿title: Start
-tags:
 ---
 <<setBackground school>>
 April 20. It's the last few days of class... you can't believe your senior year is almost over. It's been a bit hectic, staying on top of so many due dates, attending the last of club meetings, and trying to stay in touch with your friends through it all.
@@ -26,6 +25,7 @@ title: Cook1
 ---
 <<setValue "cook" true>>
 <<addTasks 1>>
+<<sfxPlay "Frying">>
 You decide to cook your favorite meal. It's worth celebrating a great first week!
 <<jump Loop1>>
 ===
@@ -65,6 +65,7 @@ title: Loop2
 title: Cook2
 ---
 <<setValue "cook" true>>
+<<sfxPlay "Frying">>
 Your favorite protein source, your favorite complex carbs, your favorite vegetables, plus dessert. Perfectly balanced.
 <<jump Loop2>>
 ===
@@ -82,9 +83,7 @@ You paint for a bit. Since your job is so technical, you think it's important fo
 ===
 title: Beat2
 ---
-<<setValue "cook" false>>
-<<setValue "work" false>>
-<<setValue "selfCare" false>>
+<<reset false>>
 <<setBackground office>>
 August 17. Recently, it feels like you've been given a constant stream of busywork. Most of it doesn't match your job description. You discuss this with your manager, who explains that this is happening because certain deadlines need to be met soon.
 Since the circumstances are temporary, you're willing to take a bit out of yourself to help the company. Perhaps that'll even help distinguish you, making you more eligible for a raise.
@@ -105,6 +104,7 @@ title: Loop3
 title: Cook3
 ---
 <<setValue "cook" true>>
+<<sfxPlay "Frying">>
 You load up some instant noodles with ingredients so it can be quick and nutritious. The taste makes you nostalgic for college. You don't realize that you're looking at those busy years with rose-tinted glasses.
 <<jump Loop3>>
 ===
@@ -123,9 +123,7 @@ You lose track of time as you immerse yourself in an endless stream of short-for
 
 title: Beat3
 ---
-<<setValue"cook" false>>
-<<setValue"work" false>>
-<<setValue"selfCare" false>>
+<<reset false>>
 <<setBackground office>>
 September 1. You've started taking your work home with you. You wonder... is everyone working this hard? It doesn't seem like it. So, are you just bad at this, or are you getting stuck with such a long list of meaningless tasks because you're still new?
 ...Whatever, some higher-up must be seeing all this hard work you're doing, so you should be set to get a raise soon. This is just a stepping stone until then.
@@ -146,6 +144,7 @@ title: Loop4
 title: Cook4
 ---
 <<setValue "cook" true>>
+<<sfxPlay "Frying">>
 You pour boiling water over instant ramen and get back to work. By the time you remember that your noodles should have cooled off, they're cold and mushy.
 <<jump Loop4>>
 ===
@@ -163,7 +162,7 @@ You need to get your work done. You can do something nice for yourself on the we
 ===
 title: Beat4
 ---
-<<setValue "work" false>>
+<<reset false>>
 <<setBackground office>>
 October 13. You are Atlas, holding the weight of the world on your shoulders, until you can give your back a break (but that's only on the weekends). Thankfully, it's Friday night, so you finally have some time to kick back!
 <<setBackground house>>
@@ -189,31 +188,37 @@ title: Loop5
 title: Laundry
 ---
 <<setValue "laundry" true>>
+<<sfxPlay "Laundry">>
 Your clothes engulf your bedroom floor and lap at your ankles. You know laundry is going to take all day and you dread it, but you have no other option, as there's nothing left in your closet to wear.
 ===
 title: WashDishes
 ---
 <<setValue "dishWash" true>>
+<<sfxPlay "Dishes">>
 You're scared to see how many dishes have piled up over the week, but you go to the sink and are surprised. Takeout, instant noodles, and being too caught up with work to remember that you need to feed yourself mean that there's hardly anything there.
 ===
 title: CallParents
 ---
 <<setValue "callParents" true>>
+<<sfxPlay "Phone Call">>
 Your parents are happy about your newfound independence as an adult (after all, you hardly need to call them anymore!). But they're also worried about you, as they hear the sadness and exhaustion in your voice as you reply. They give you space to talk about how you're doing, but you don't know what to say to them.
 ===
 title: Fridge
 ---
 <<setValue "cleanOutFridge" true>>
+<<sfxPlay "Fridge Clean">>
 A few months ago, your fridge would be stocked with fresh ingredients. Back then, you'd make sure to use everything before its expiration date. Now, the only things that haven't gone bad are a pack of beverages and a shelf of condiments.
 ===
 title: JobHunt
 ---
+<<sfxPlay "Job Hunting">>
 <<setValue "jobHunt" true>>
 You feel guilty for thinking about switching companies, but you think that a change of pace could be nice. You scroll through job listings, but they all pay close to the one you have. You don't have the time or energy to adjust your resume, submit it, and go in for an interview (if you're lucky) just for the chance to discuss a higher salary.
 ===
 title: Beat5
 ---
 <<setBackground office>>
+<<sfxPlay "Typing">>
 Is this all there is to life?
 -> Work
 <<setBackground house>>
@@ -222,6 +227,7 @@ The same tasks, yet they never seem to get easier.
 A backlog that you'll never complete.
 
 <<setBackground office>>
+<<sfxPlay "Typing">>
 You feel broken.
 -> Work
 <<setBackground house>>
@@ -230,6 +236,7 @@ You recently used your paid vacation days to stay home and recover from a cold. 
 Maybe things will get better with the new year.
 
 <<setBackground office>>
+<<sfxPlay "Typing">>
 You've lost touch with your sense of self. All you are is what you complete, and it never seems to be enough. Your loneliness and dissatisfaction drive you to work harder, which fuels your loneliness and dissatisfaction.
 You're out of options. It's a cycle you can't break. Unless...
 -> Quit

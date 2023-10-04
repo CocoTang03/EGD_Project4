@@ -1,12 +1,12 @@
 ﻿title: Start
 tags:
 ---
-// todo: set classroom sprite
+<<setBackground school>>
 April 20. It's the last few days of class... you can't believe your senior year is almost over. It's been a bit hectic, staying on top of so many due dates, attending the last of club meetings, and trying to stay in touch with your friends through it all.
 But it'll be over soon, and the future is looking bright! You've already accepted a job opportunity by a company that matches your ethos. With your passion, you're certain that you'll be doing your part to help the world around you... right after graduation, nonetheless!
-//todo: set office sprite
+<<setBackground office>>
 June 2. You just finished your first week! You're still matching names to faces and keep directing all your questions to the same coworker, but the environment there is great. You know that you're really going to shine after you finish adjusting.
-//todo: set home sprite
+<<setBackground house>>
 Now that you've arrived back home, you decide to...
 <<jump Loop1>>
 
@@ -46,9 +46,9 @@ You call your friends and family and excitedly tell them about how things have b
 title: Beat1
 ---
 <<reset false>>
-//todo: set office sprite
+<<setBackground office>>
 July 5. Things are finally starting to fall into place! You don't need to ask for help as often, and you've made some friends within the company. You've noticed that your workload has been picking up a bit as more things have been assigned to you, but it means that your hard work is being recognized!
-//todo: set home sprite
+<<setBackground house>>
 Now that you've arrived back home, you decide to...
 ===
 title: Loop2
@@ -85,10 +85,10 @@ title: Beat2
 <<setValue "cook" false>>
 <<setValue "work" false>>
 <<setValue "selfCare" false>>
-//todo: set office sprite
+<<setBackground office>>
 August 17. Recently, it feels like you've been given a constant stream of busywork. Most of it doesn't match your job description. You discuss this with your manager, who explains that this is happening because certain deadlines need to be met soon.
 Since the circumstances are temporary, you're willing to take a bit out of yourself to help the company. Perhaps that'll even help distinguish you, making you more eligible for a raise.
-//todo: set home sprite
+<<setBackground house>>
 Now that you've arrived back home, you decide to...
 ===
 title: Loop3
@@ -126,10 +126,10 @@ title: Beat3
 <<setValue"cook" false>>
 <<setValue"work" false>>
 <<setValue"selfCare" false>>
-//todo: set office sprite
+<<setBackground office>>
 September 1. You've started taking your work home with you. You wonder... is everyone working this hard? It doesn't seem like it. So, are you just bad at this, or are you getting stuck with such a long list of meaningless tasks because you're still new?
 ...Whatever, some higher-up must be seeing all this hard work you're doing, so you should be set to get a raise soon. This is just a stepping stone until then.
-//todo: set home sprite
+<<setBackground house>>
 Now that you've arrived back home, you decide to...
 ===
 title: Loop4
@@ -164,9 +164,9 @@ You need to get your work done. You can do something nice for yourself on the we
 title: Beat4
 ---
 <<setValue "work" false>>
-//todo: set office sprite
+<<setBackground office>>
 October 13. You are Atlas, holding the weight of the world on your shoulders, until you can give your back a break (but that's only on the weekends). Thankfully, it's Friday night, so you finally have some time to kick back!
-//set home sprite
+<<setBackground house>>
 Now that you've arrived back home, you decide to...
 ...Oh. Looks like you went straight to bed and slept for twelve hours straight. Okay, now that you're awake, you decide to...
 <<jump Loop5>>
@@ -213,28 +213,28 @@ You feel guilty for thinking about switching companies, but you think that a cha
 ===
 title: Beat5
 ---
-//todo: set office sprite
+<<setBackground office>>
 Is this all there is to life?
 -> Work
-//todo: set home sprite
+<<setBackground house>>
 The same tasks, yet they never seem to get easier.
 -> Keep working
 A backlog that you'll never complete.
 
-//todo: set office sprite
+<<setBackground office>>
 You feel broken.
 -> Work
-//todo: set home sprite
+<<setBackground house>>
 You recently used your paid vacation days to stay home and recover from a cold. Your immune system needed a week to take care of it.
 -> Keep working
 Maybe things will get better with the new year.
 
-//todo: set office sprite
+<<setBackground office>>
 You've lost touch with your sense of self. All you are is what you complete, and it never seems to be enough. Your loneliness and dissatisfaction drive you to work harder, which fuels your loneliness and dissatisfaction.
 You're out of options. It's a cycle you can't break. Unless...
 -> Quit
 
-// todo: set parents home sprite
+<<setBackground family>>
 Moving back in with your parents... a part of you feels like you've thrown away everything you've built for yourself. You're overwhelmed with thoughts of how much of a failure you are, but they pause when your parents wrap you in a hug. Your bottled-up emotions spill out.
 -> Explore your childhood bedroom
 Just being in this space makes you feel a bit lighter. As you start re-organizing your belongings into the room, you feel like you've unearthed a time capsule of fond memories. Toys, artwork from middle school, your old DS... You pop in a game and finally allow yourself to do something fun again.
@@ -243,7 +243,7 @@ Your family calls you down for dinner. Your dad cooked you your favorite. You ea
 -> Reconnect with the family pet
 It feels like it's been forever since you interacted with the family's cat. You let her sniff your hand before you go in to pet her. Your heart softens as she starts purring.
 
-// todo: set sprite to colors
+<<setBackground abstract>>
 The process of healing and getting back on your feet takes time, but you needed all this time before you could move forward and return to work with a healthier mindset. Counting up the days "wasted" and feeling guilty is what you would have done in the past, but not anymore. What purpose would that serve you?
 Sometimes, the world is built in ways that won't take you into consideration. In being pressured to "adapt", you may be forced to minimize yourself and your needs. If you aren't able to do that, then you're made to feel guilty about it.
 As you've slowly discovered happiness once again, you've reached new understandings. You're allowed to insist on your needs. You're allowed to draw boundaries. You shouldn't let someone else's understanding of how productive you are diminish your inner worth or get in the way of living your most fulfilling life.
